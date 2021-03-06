@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  farm: one
+  name: MyString
+  width: 1
+  length: 1
+  crop: one
+  last_sprayed: 2021-03-06
+  hectarage: 1
+
+two:
+  farm: two
+  name: MyString
+  width: 1
+  length: 1
+  crop: two
+  last_sprayed: 2021-03-06
+  hectarage: 1
