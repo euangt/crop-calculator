@@ -1,3 +1,4 @@
 class Crop < ApplicationRecord
-  belongs_to :chemical
+  belongs_to :field
+  has_one :chemical
 end
