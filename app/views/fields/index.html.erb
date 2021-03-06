@@ -1,1 +1,7 @@
 <h1>Apple Tree Farm</h1>
+<hr>
+<% @fields.each do |field| %>
+<h3><%= field.name %></h3>
+<%= link_to "Field details", field_path(field)  %>
+<hr>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>Apple Tree Farm</h1>
+<hr>
+<h3><%= @field.name %></h3>
+<p>Crop on Field: <%= @crop.crop_name %></p>
+<p>Last Sprayed: <%= @field.last_sprayed %></p>
+<p>Size: <%= @field.hectarage %></p>
+<p>Chemical Used: <%= @chemical.name %></p>
+<p>Next Spray: <%= @field.last_sprayed + @offset %></p>
+<p>Next Order: </p> 
+<ul>
+  <li>Order Date: <%= @field.last_sprayed + @offset - 7 %></li>
+  <li>Order Price: £<%= @order_price %> </li>
+</ul>
+<%= link_to "Back to fields", fields_path  %>
+<hr>
