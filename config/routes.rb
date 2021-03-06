@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root :to => "fields#index"
+  resources :farms do
+    resources :fields, only: [:index, :edit, :update]
+  end
 end
