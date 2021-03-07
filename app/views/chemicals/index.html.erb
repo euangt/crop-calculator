@@ -6,12 +6,14 @@
   <h3><%= @chemical.name %></h3>
   <% @fields.where(crop_id: crop.id).each do |field| %>
     <% @hectarage += field.hectarage %>
+    <% field.last_sprayed < @date ? @date = field.last_sprayed : @date %>
   <% end %>
   <p>Total Hectarage: <%= @hectarage %></p>
   <p>Next Order:</p>
   <ul>
-    <li><p>Order Date:</p></li>
+    <li><p>Order Date: <%= @date + (@chemical.application_frequency * 7) - 7 %></p></li>
     <li><p>Order Price: £<%= @hectarage * @chemical.price_per_litre %></p></li>
   </ul>
 <hr>
+<% @date = Date.today %>
 <% end %>
