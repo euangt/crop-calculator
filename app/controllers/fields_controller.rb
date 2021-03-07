@@ -5,6 +5,9 @@ class FieldsController < ApplicationController
     @fields = Field.all
   end
     
+  ##
+  # EVERYTHING BELOW FOR CONTINUED PERSONAL DEVELOPMENT
+  ##
   def show
     @crop = Crop.find(@field.crop_id)
     @chemical = Chemical.find(@crop.chemical_id)
