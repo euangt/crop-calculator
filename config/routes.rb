@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'chemicals/index'
-  root :to => "chemicals#index"
+  root :to => "crops#index"
     resources :fields, only: [:index, :show, :edit, :update]
-  resources :chemicals, only: [ :index ]
+  resources :crops, only: [ :index ]
 end

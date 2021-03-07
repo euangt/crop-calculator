@@ -1,0 +1,19 @@
+<h1>Apple Tree Farm</h1>
+<hr>
+<% @crops.each do |crop| %>
+  <h3>Crop: <%= crop.crop_name %></h3>
+  <% @chemical = Chemical.find(crop.chemical_id) %>
+  <h3><%= @chemical.name %></h3>
+  <% @fields.where(crop_id: crop.id).each do |field| %>
+    <% @hectarage += field.hectarage %>
+    <% field.last_sprayed < @date ? @date = field.last_sprayed : @date %>
+  <% end %>
+  <p>Next Order:</p>
+  <ul>
+    <li><p>Order Date: <%= @date + @chemical.application_frequency - 7 %></p></li>
+    <li><p>Order size: <%= @hectarage %> litres</p></li>
+    <li><p>Order Price: £<%= @hectarage * @chemical.price_per_litre %></p></li>
+  </ul>
+<hr>
+<% @date = Date.today %>
+<% end %>
