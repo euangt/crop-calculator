@@ -1,7 +1,7 @@
 Farm.destroy_all
 Chemical.destroy_all
-Crop.destroy_all
-Field.destroy_all
+# Crop.destroy_all
+# Field.destroy_all
 
 puts "creating farm"
 apple_tree = Farm.create!(name: "AppleTree Farm")
