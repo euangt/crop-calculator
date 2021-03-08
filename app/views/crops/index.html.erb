@@ -10,9 +10,9 @@
   <% end %>
   <p>Next Order:</p>
   <ul>
-    <li><p>Order Date: <%= @date + @chemical.application_frequency - 7 %></p></li>
+    <li><p>Order Date: <%= crop.next_order(@date, @chemical) %></p></li>
     <li><p>Order size: <%= @hectarage %> litres</p></li>
-    <li><p>Order Price: £<%= @hectarage * @chemical.price_per_litre %></p></li>
+    <li><p>Order Price: £<%= @chemical.total_price(@chemical, @hectarage) %></p></li>
   </ul>
 <hr>
 <% @date = Date.today %>

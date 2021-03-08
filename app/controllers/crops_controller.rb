@@ -7,4 +7,5 @@ class CropsController < ApplicationController
     # set arbitrary date for comparison - expanded programme would set date from most recent order
     @date = Date.today
   end
+
 end
