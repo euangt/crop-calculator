@@ -1,6 +1,9 @@
 <h1>Apple Tree Farm</h1>
 <hr>
 <% @crops.each do |crop| %>
+  
+  <% @date = Date.today %> <%# I fully appreciate this is inelegant - When deploying my code to Heroku I was returning different (and incorrect) results from my local server. An expanded programme would draw from the last order made %>
+
   <h3>Crop: <%= crop.crop_name %></h3>
   <% @chemical = Chemical.find(crop.chemical_id) %>
   <h3><%= @chemical.name %></h3>
@@ -15,5 +18,4 @@
     <li><p>Order Price: £<%= @chemical.total_price(@chemical, @hectarage) %></p></li>
   </ul>
 <hr>
-<% @date = Date.today %>
 <% end %>

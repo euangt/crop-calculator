@@ -4,8 +4,6 @@ class CropsController < ApplicationController
     @hectarage = 0
     @crops = Crop.all
 
-    # set arbitrary date for comparison - expanded programme would set date from most recent order
-    @date = Date.today
   end
 
 end
