@@ -5,7 +5,7 @@
   <h3><%= @chemical.name %></h3>
   <p>Next Order:</p>
   <ul>
-    <li><p>Order Date: <%= @crop.next_order(@date, @chemical) %></p></li>
+    <li><p>Order Date: <%= @order_date %></p></li>
     <li><p>Order size: <%= @hectarage %> litres</p></li>
     <li><p>Order Price: £<%= @chemical.total_price(@chemical, @hectarage) %></p></li>
   </ul>
