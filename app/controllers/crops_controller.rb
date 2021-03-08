@@ -1,14 +1,12 @@
 class CropsController < ApplicationController
   def index
-    @fields = Field.all
-    @hectarage = 0
     @crops = Crop.all
   end
 
   def show 
     @crop = Crop.find(params[:id])
     @fields = Field.where(crop_id: @crop.id)
-    
+
     @hectarage = hectarage_count(@fields)
     @chemical = Chemical.find(@crop.chemical_id)
     @date = earliest_spray(@fields)
