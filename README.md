@@ -32,7 +32,7 @@ $ gem install rails
 ### Clone this repository into the relevant local directory
 ```shell
 $ git clone https://github.com/euangt/crop-calculator
-$ cd crop-calculato
+$ cd crop-calculator
 ```
 
 ### Once this is done, in the terminal run: 
@@ -58,3 +58,10 @@ Views: /crop-calculator/app/views
 
 Schema can be found at /crop-calculator/db/schema.rb
 Seeds can be found at /crop-calculator/db/seeds.rb
+
+## Next Steps
+
+Implementation of 
+* an Order model and accompanying controller to allow the creation of a new order for chemicals. 
+* an Update method within the fields controller to allow for the update of last_sprayed value and, if desired, alteration of the crop on the field. 
+
