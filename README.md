@@ -50,14 +50,14 @@ It is also possible to view all fields by apending /fields to either localhost o
 
 For those unfamiliar with the code structure of Rails, it follows the MVC pattern and each part can be viewed at the following filepaths:
 
-Models: /crop-calculator/app/models
-Controllers: /crop-calculator/app/controllers
-Views: /crop-calculator/app/views
+* Models: /crop-calculator/app/models
+* Controllers: /crop-calculator/app/controllers
+* Views: /crop-calculator/app/views
 
 ## Database analysis: 
 
-Schema can be found at /crop-calculator/db/schema.rb
-Seeds can be found at /crop-calculator/db/seeds.rb
+* Schema can be found at /crop-calculator/db/schema.rb
+* Seeds can be found at /crop-calculator/db/seeds.rb
 
 ## Next Steps
 
