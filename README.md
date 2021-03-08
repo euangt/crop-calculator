@@ -42,7 +42,7 @@ $ rails db:create db:migrate db:seed # Will constructs the database, schema and 
 $ rails s # This starts the server 
 ```
 
-To view the results, Rails will run a server at http://localhost:3000/ where each chemical, its hectarage, next order details (litres and cost) can be viewed. 
+To view the results, Rails will run a server at http://localhost:3000/ where each crop and its chemical can be viewed. From here, each crop can be viewed with further details of its hectarage and next order details (litres and cost).
 
 It is also possible to view all fields by apending /fields to either localhost or the heroku url, where a link can be followed to identify each field's specific details. 
 
